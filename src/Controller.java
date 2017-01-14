@@ -23,10 +23,10 @@ public class Controller implements EventHandler<ActionEvent>{
 			
 			//below the python file is written
 			pw.write(
-					"import subprocess\n\n"
+					"from subprocess import call\n\n"
 					
 					+ "def main(): \n "	
-					+ 		"\t print(\"Hello\")\n\n"
+					+ 		"\t call([\"c:\\progra~2\\Google\\Chrome\\Application\\chrome.exe\\\", \"--kisok --chrome-frame --new-window www.google.com\"])\n\n"
 					
 					+ "if __name__ == '__main__':\n"
 					+ 		"\t main()");
