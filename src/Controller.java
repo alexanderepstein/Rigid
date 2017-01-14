@@ -1,35 +1,86 @@
 import javafx.event.EventHandler;
-import javafx.stage.DirectoryChooser;
-
-import java.io.File;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Alert.AlertType;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 
 import javafx.event.ActionEvent;
-import javafx.stage.Stage;
+import javafx.scene.control.ButtonType;
 public class Controller implements EventHandler<ActionEvent>{
-Stage stage;
-File directory;
-String directoryPath = "";
-	public Controller(Stage inStage)
-	{
-		stage = inStage;
-	}
 
-	@Override
-	public void handle(ActionEvent event) {
-		try
+
+	
+	
+	
+	public void handle(ActionEvent event) { //this will fire when the create button is clicked on the U.I.
+
+		if (!Rigid.URL.getText().equals("")){ //check if the url field is not empty
+		if (!Rigid.Name.getText().equals("")){ //check if the name field is not empty
+		if (!Rigid.DirecLoc.getText().equals("")){ //check if the specified directory field is not empty
+		try(PrintWriter pw = new PrintWriter(new FileWriter(Rigid.DirecLoc.getText()+"/"+Rigid.Name.getText()+ ".py"));) //try with resource will close once done this opens up a new python file to write to
 		{
-		DirectoryChooser Direc = new DirectoryChooser();
-		Direc.setTitle("Choose where to store application");
-		directory = Direc.showDialog(stage);
-		directoryPath = directory.toString();
-		Rigid.DirecLoc.setText(directoryPath);
+			
+			//below the python file is written
+			pw.write(
+					"import subprocess\n\n"
+					
+					+ "def main(): \n "
+					+ 		"\t print(\"Hello\")\n\n"
+					
+					+ "if __name__ == '__main__':\n"
+					+ 		"\t main()");
+			pw.close();
+			
+			
+			
+			Alert alert = new Alert(AlertType.INFORMATION, "Successfully created application!"); //Let the user know that it worked
+			alert.showAndWait().ifPresent(response -> {
+			     if (response == ButtonType.OK) {
+			    	 Rigid.DirecLoc.setText(""); //clear the fields
+			    	 Rigid.URL.setText("");
+			    	 Rigid.Name.setText("");
+			        alert.close();
+			     }
+			 });
+			
+		} catch (IOException e) {
+			Alert alert = new Alert(AlertType.ERROR, "There was an error in creating the application!"); //if any error occurred aware user
+			alert.showAndWait().ifPresent(response -> {
+			     if (response == ButtonType.OK) {
+			        alert.close();
+			     }});
+			
 		}
-		catch (Exception e)
+		
+		}
+		else
 		{
-			System.out.println("No directory chosen!");
+			Alert alert = new Alert(AlertType.ERROR, "A directory must be specified!"); //alert user that they didn't specify directory
+			alert.showAndWait().ifPresent(response -> {
+			     if (response == ButtonType.OK) {
+			        alert.close();
+			     }});
 		}
 	}
 	
+	else
+	{
+		Alert alert = new Alert(AlertType.ERROR, "A name must be specified!"); ///alert user that they didn't specify name of app
+		alert.showAndWait().ifPresent(response -> {
+		     if (response == ButtonType.OK) {
+		        alert.close();
+		     }});
+	}
 
-
+	}
+		else
+		{
+			Alert alert = new Alert(AlertType.ERROR, "A URL must be specified!");  //alert user that they didn't specify url 
+			alert.showAndWait().ifPresent(response -> {
+			     if (response == ButtonType.OK) {
+			        alert.close();
+			     }});
+		}
+	}
 }
