@@ -26,7 +26,7 @@ public class Controller implements EventHandler<ActionEvent>{
 					"from subprocess import call\n\n"
 					
 					+ "def main(): \n "	
-					+ 		"\t call([\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe \" , \"--kisok --chrome-frame --new-window \" ])\n\n"
+					+ 		"\t call([\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe  \" , \" --elevated  --kiosk  --new-window "+Rigid.URL.getText()+"\" ])\n\n"
 					
 					+ "if __name__ == '__main__':\n"
 					+ 		"\t main()");
@@ -37,7 +37,7 @@ public class Controller implements EventHandler<ActionEvent>{
 			Alert alert = new Alert(AlertType.INFORMATION, "Successfully created application!"); //Let the user know that it worked
 			alert.showAndWait().ifPresent(response -> {
 			     if (response == ButtonType.OK) {
-			    	 Rigid.DirecLoc.setText(""); //clear the fields
+			    	 //clear the fields
 			    	 Rigid.URL.setText("");
 			    	 Rigid.Name.setText("");
 			        alert.close();
