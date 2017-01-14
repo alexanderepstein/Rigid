@@ -38,8 +38,7 @@ public class Rigid extends Application {
 	public void start(Stage stage) throws Exception {
 		Pane pane = new Pane(); // pane containing app
 		creationControl = new Controller();
-		pane.getChildren().addAll(createHeader(), createContrast(), createInformation(), createFields(),
-				createButton()); // add components to pane
+		pane.getChildren().addAll(createHeader(), createContrast(), createInformation(), createFields()); // add components to pane
 		Scene scene = new Scene(pane, width, height, Color.DARKGRAY); // create
 																		// the
 																		// scene
@@ -63,6 +62,9 @@ public class Rigid extends Application {
 		}
 		Image folderIcon = new Image(input);
 		ImageView folderIconView = new ImageView(folderIcon);
+		Button btnCreate = createButton();
+		VBox trueContainer = new VBox(5);
+	
 		VBox container = new VBox(20); // create the vertical box that will be
 										// result of function
 
@@ -106,9 +108,11 @@ public class Rigid extends Application {
 		container.getChildren().addAll(URL, Name, DirecBox); // adding all the
 																// components to
 																// the container
-		container.setLayoutX(135); // some hardcoded alignment
-		container.setLayoutY(80); // some hardcoded alignment
-		return container;
+		trueContainer.setLayoutX(135); // some hardcoded alignment
+		trueContainer.setLayoutY(75); // some hardcoded alignment
+		btnCreate.setTranslateX(277);
+		trueContainer.getChildren().addAll(container,btnCreate);
+		return trueContainer;
 	}
 
 	private VBox createInformation() // This function creates the labels to
@@ -123,7 +127,7 @@ public class Rigid extends Application {
 		Label lbldirec = new Label("Directory:");
 		lbldirec.setTextFill(Color.BLACK);
 		container.setAlignment(Pos.CENTER_RIGHT);
-		container.setLayoutY(85); // some hardcoded alignment
+		container.setLayoutY(80); // some hardcoded alignment
 		container.setLayoutX(55); // some hardcoded alignment
 		container.getChildren().addAll(lblurl, lblname, lbldirec); // adding all
 																	// the
