@@ -25,7 +25,7 @@ public class Controller implements EventHandler<ActionEvent>{
 			pw.write(
 					"import subprocess\n\n"
 					
-					+ "def main(): \n "
+					+ "def main(): \n "	
 					+ 		"\t print(\"Hello\")\n\n"
 					
 					+ "if __name__ == '__main__':\n"

@@ -26,6 +26,8 @@ static Controller creationControl; //object that controls the create button
 static TextField URL = new TextField();
 static TextField Name = new TextField();
 static TextField DirecLoc = new TextField();
+String userDir = System.getProperty("user.home");
+DirectoryChooser Direc = new DirectoryChooser();
 Stage ms; 
 	
 public static void main(String[] args) {
@@ -49,6 +51,7 @@ public static void main(String[] args) {
 	{
 		FileInputStream input = null; // there is a better way to set the icon for a button but this will do for now
 		try {
+			
 			input = new FileInputStream("Icons/folder.png");
 		} catch (FileNotFoundException e) {
 			
@@ -63,7 +66,8 @@ public static void main(String[] args) {
 		Name.setMinSize(300,20);
 		DirecLoc.setMinSize(300, 20);
 		
-		
+		Direc.setInitialDirectory(new File(userDir+"/Desktop"));
+		DirecLoc.setText(userDir +"/Desktop");
 		Button btnDirec = new Button("",folderIconView);
 		btnDirec.setStyle("-fx-background-color: #007aff;");
 		HBox DirecBox = new HBox(5);
@@ -73,7 +77,7 @@ public static void main(String[] args) {
 		    	String directoryPath = "";
 		    	try //this try lets the user choose a directory from their system
 				{
-				DirectoryChooser Direc = new DirectoryChooser();
+				
 				Direc.setTitle("Choose where to store application");
 				directory = Direc.showDialog(ms);
 				directoryPath = directory.toString();
@@ -81,7 +85,7 @@ public static void main(String[] args) {
 				}
 				catch (Exception e1)
 				{
-					System.out.println("No directory chosen!");
+					//System.out.println("No directory chosen!");
 				}
 		    }
 		});
