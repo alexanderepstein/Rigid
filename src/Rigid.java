@@ -65,7 +65,7 @@ public static void main(String[] args) {
 		URL.setMinSize(300,20);
 		Name.setMinSize(300,20);
 		DirecLoc.setMinSize(300, 20);
-		
+		DirecLoc.setEditable(false);
 		Direc.setInitialDirectory(new File(userDir+"/Desktop"));
 		DirecLoc.setText(userDir +"/Desktop");
 		Button btnDirec = new Button("",folderIconView);
