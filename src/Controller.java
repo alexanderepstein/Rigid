@@ -26,7 +26,7 @@ public class Controller implements EventHandler<ActionEvent>{
 					"from subprocess import call\n\n"
 					
 					+ "def main(): \n "	
-					+ 		"\t call([\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe\\\", \"--kisok --chrome-frame --new-window \" ])\n\n"
+					+ 		"\t call([\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe \" , \"--kisok --chrome-frame --new-window \" ])\n\n"
 					
 					+ "if __name__ == '__main__':\n"
 					+ 		"\t main()");
