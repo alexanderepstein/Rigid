@@ -49,9 +49,20 @@ public void start(Stage stage) throws Exception {
 								stage.setResizable(false);
 								stage.setScene(scene);
 								stage.setTitle("Rigid");
+								
 								ms = stage; // setting stage here to be referenced later
 								stage.show();
-}
+								FileInputStream input = null; // there is a better way to set the icon
+								// for a button but this will do for now
+								try {
+
+																input = new FileInputStream("Icons/rigid.png");
+								} catch (FileNotFoundException e) {
+
+																e.printStackTrace();
+								}
+								stage.getIcons().add(new Image(input));
+}				
 
 private VBox createFields()  // This function sets up the textboxes and the
 // create directory button
