@@ -18,18 +18,19 @@ public class Controller implements EventHandler<ActionEvent>{
 		if (!Rigid.URL.getText().equals("")){ //check if the url field is not empty
 		if (!Rigid.Name.getText().equals("")){ //check if the name field is not empty
 		if (!Rigid.DirecLoc.getText().equals("")){ //check if the specified directory field is not empty
-		try(PrintWriter pw = new PrintWriter(new FileWriter(Rigid.DirecLoc.getText()+"/"+Rigid.Name.getText()+ ".py"));) //try with resource will close once done this opens up a new python file to write to
+		try(PrintWriter pw = new PrintWriter(new FileWriter(Rigid.DirecLoc.getText()+"/"+Rigid.Name.getText()+ ".bat"));) //try with resource will close once done this opens up a new python file to write to
 		{
 			
-			//below the python file is written
-			pw.write(
+			//below the python file is written (if still using this make sure file extension is .py not .bat
+			/*pw.write(
 					"from subprocess import call\n\n"
 					
 					+ "def main(): \n "	
 					+ 		"\t call([\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe  \" , \" --new-window --app="+Rigid.URL.getText()+"\" ])\n\n"
 					
 					+ "if __name__ == '__main__':\n"
-					+ 		"\t main()");
+					+ 		"\t main()");*/
+			pw.write("cd C:\\Program Files (x86)\\Google\\Chrome\\Application\\\n chrome --new-window --app=" + Rigid.URL.getText());
 			pw.close();
 			
 			
