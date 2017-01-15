@@ -10,8 +10,11 @@ import javafx.scene.layout.HBox;
 import javafx.scene.layout.Pane;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
+import javafx.scene.control.Alert.AlertType;
 import javafx.scene.shape.Rectangle;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.ButtonType;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import java.io.File;
@@ -38,7 +41,7 @@ public class Rigid extends Application {
 	public void start(Stage stage) throws Exception {
 		Pane pane = new Pane(); // pane containing app
 		creationControl = new Controller();
-		pane.getChildren().addAll(createHeader(), createContrast(), createInformation(), createFields()); // add components to pane
+		pane.getChildren().addAll(createHeader(),createAbout(), createContrast(), createInformation(), createFields()); // add components to pane
 		Scene scene = new Scene(pane, width, height, Color.DARKGRAY); // create
 																		// the
 																		// scene
@@ -61,7 +64,7 @@ public class Rigid extends Application {
 			e.printStackTrace();
 		}
 		Image folderIcon = new Image(input);
-		ImageView folderIconView = new ImageView(folderIcon);
+		
 		Button btnCreate = createButton();
 		VBox trueContainer = new VBox(5);
 	
@@ -74,7 +77,7 @@ public class Rigid extends Application {
 		DirecLoc.setEditable(false);
 		Direc.setInitialDirectory(new File(userDir + "/Desktop"));
 		DirecLoc.setText(userDir + "/Desktop");
-		Button btnDirec = new Button("", folderIconView);
+		Button btnDirec = new Button("", new ImageView(folderIcon));
 		btnDirec.setStyle("-fx-background-color: #007aff;");
 		HBox DirecBox = new HBox(5);
 		btnDirec.setOnAction(new EventHandler<ActionEvent>() { // when the
@@ -178,6 +181,49 @@ public class Rigid extends Application {
 		head.setLayoutX(30); // some hardcoded alignment
 		head.setTranslateY(20); // some hardcoded alignment
 		return head;
+	}
+	
+	private Button createAbout()
+	{
+		FileInputStream input = null; // there is a better way to set the icon
+		// for a button but this will do for now
+		try {
+		
+		input = new FileInputStream("Icons/info.png");
+		} catch (FileNotFoundException e) {
+		
+		e.printStackTrace();
+		}
+		Image infoIcon = new Image(input);
+		Button about = new Button();
+		about.setMinSize(25, 25);
+		about.setMaxSize(50, 50);
+		about.setGraphic(new ImageView(infoIcon));
+		about.setLayoutX(460);
+		about.setStyle("-fx-background-color: transparent;");
+		about.setLayoutY(5);
+		
+		about.setOnAction(new EventHandler<ActionEvent>() { // when the
+			// directory
+			// button is
+			// clicked
+			// lambda
+			// function will
+			// occur
+@Override
+public void handle(ActionEvent e) {
+	Alert alert = new Alert(AlertType.INFORMATION, "Rigid lets you create an application out of any URL!\nJust enter the required information and Rigid will do the rest. \nVersion Alpha \nBy: Alexander Epstein ");
+	/*alert.showAndWait().ifPresent(response -> {
+	     if (response == ButtonType.OK) {
+	        alert.close();
+	     }});*/
+	alert.setHeaderText("About Rigid");
+	alert.setTitle("Rigid");
+	alert.setGraphic(new ImageView(infoIcon));
+	alert.show();
+}
+});
+		return about;
 	}
 
 }
