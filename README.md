@@ -19,7 +19,7 @@ This is where Rigid comes in, it creates an application on your computer that po
   **Note** The first time you double click a .py file it might ask you to associate this with a program after choosing the python interpreter once this should not occur again 
 
 ## Known Bugs
- * The python file still has a python icon and not the icon of the website.
+ * The batch file still has a batch icon and not the icon of the website.
  * URL's must start with http://www. or https://www.
  * If cloned the jar or exe cannot leave the folder or it won't run (this occurs because it doesnt know where the icon images are stored)
  * If downloading the zip the exe cannot leave the Rigid folder or else the application wont run (this occurs because it doesnt know where the icon images are stored)
@@ -27,7 +27,6 @@ This is where Rigid comes in, it creates an application on your computer that po
 
     
 ## Dependencies
-**Python 2.7**: Rigid looks to create a python file which when executed will point to your webapp. Because of this python 2.7.x is required. https://www.python.org/downloads/
 
 **Chrome:** Google Chrome is the browser used to actually render your application if you have the 64bit version make sure a  version also exists in Program Files (x86) https://www.google.com/chrome/browser/desktop/
 
