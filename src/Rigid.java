@@ -70,7 +70,7 @@ public class Rigid extends Application {
 	
 		VBox container = new VBox(20); // create the vertical box that will be
 										// result of function
-
+		URL.setText("http://www.");
 		URL.setMinSize(300, 20);
 		Name.setMinSize(300, 20);
 		DirecLoc.setMinSize(300, 20);
@@ -212,13 +212,14 @@ public class Rigid extends Application {
 			// occur
 @Override
 public void handle(ActionEvent e) {
-	Alert alert = new Alert(AlertType.INFORMATION, "Rigid lets you create an application out of any URL!\nJust enter the required information and Rigid will do the rest. \nVersion Alpha \nBy: Alexander Epstein ");
+	Alert alert = new Alert(AlertType.INFORMATION, "Rigid lets you create an application out of any URL!\nThis is an open source windows port of Fluid for MacOS\nJust enter the required information and Rigid will do the rest. \nVersion: Alpha Release \nBy: Alexander Epstein ");
 	/*alert.showAndWait().ifPresent(response -> {
 	     if (response == ButtonType.OK) {
 	        alert.close();
 	     }});*/
-	alert.setHeaderText("About Rigid");
-	alert.setTitle("Rigid");
+	alert.setHeaderText("Rigid Alpha");
+
+	alert.setTitle("About Rigid");
 	alert.setGraphic(new ImageView(infoIcon));
 	alert.show();
 }

@@ -38,7 +38,7 @@ public class Controller implements EventHandler<ActionEvent>{
 			alert.showAndWait().ifPresent(response -> {
 			     if (response == ButtonType.OK) {
 			    	 //clear the fields
-			    	 Rigid.URL.setText("");
+			    	 Rigid.URL.setText("http://www.");
 			    	 Rigid.Name.setText("");
 			        alert.close();
 			     }
