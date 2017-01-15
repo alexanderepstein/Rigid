@@ -44,7 +44,8 @@ public class Rigid extends Application {
 		pane.getChildren().addAll(createHeader(),createAbout(), createContrast(), createInformation(), createFields()); // add components to pane
 		Scene scene = new Scene(pane, width, height, Color.DARKGRAY); // create
 																		// the
-																		// scene
+																	// scene
+		stage.setResizable(false);
 		stage.setScene(scene);
 		stage.setTitle("Rigid");
 		ms = stage; // setting stage here to be referenced later
