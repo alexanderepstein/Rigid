@@ -1,4 +1,4 @@
-# Rigid 
+# Rigid <img src="https://github.com/alexanderepstein/Rigid/blob/master/Icons/rigid_github_small.png" alt="Rigid Logo" style="width:50;height:50;">
 
 Web applications like Gmail, Facebook, Soundcloud and Pandora are becoming more and more like desktop applications every day. Running each of these web apps in a separate tab in your browser can be a real pain.
 
