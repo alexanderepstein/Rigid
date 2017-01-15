@@ -30,7 +30,7 @@ public class Controller implements EventHandler<ActionEvent>{
 					
 					+ "if __name__ == '__main__':\n"
 					+ 		"\t main()");*/
-			pw.write("cd C:\\Program Files (x86)\\Google\\Chrome\\Application\\\n chrome --new-window --app=" + Rigid.URL.getText());
+			pw.write("@ECHO OFF\ncd C:\\Program Files (x86)\\Google\\Chrome\\Application\\\n chrome --new-window --app=" + Rigid.URL.getText());
 			pw.close();
 			
 			
