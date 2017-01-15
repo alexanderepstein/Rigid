@@ -26,7 +26,7 @@ public class Controller implements EventHandler<ActionEvent>{
 					"from subprocess import call\n\n"
 					
 					+ "def main(): \n "	
-					+ 		"\t call([\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe  \" , \" --elevated  --kiosk  --new-window "+Rigid.URL.getText()+"\" ])\n\n"
+					+ 		"\t call([\"C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe  \" , \" --new-window --app="+Rigid.URL.getText()+"\" ])\n\n"
 					
 					+ "if __name__ == '__main__':\n"
 					+ 		"\t main()");
@@ -38,7 +38,7 @@ public class Controller implements EventHandler<ActionEvent>{
 			alert.showAndWait().ifPresent(response -> {
 			     if (response == ButtonType.OK) {
 			    	 //clear the fields
-			    	 Rigid.URL.setText("http://www.");
+			    	 Rigid.URL.setText("");
 			    	 Rigid.Name.setText("");
 			        alert.close();
 			     }

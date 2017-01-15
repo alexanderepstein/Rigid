@@ -9,7 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
-import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -73,7 +72,6 @@ private VBox createFields()  // This function sets up the textboxes and the
 
 								VBox container = new VBox(20); // create the vertical box that will be
 								// result of function
-								URL.setText("http://www.");
 								URL.setMinSize(300, 20);
 								Name.setMinSize(300, 20);
 								DirecLoc.setMinSize(300, 20);
