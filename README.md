@@ -1,4 +1,4 @@
-# Rigid <img src="https://github.com/alexanderepstein/Rigid/blob/master/Icons/rigid_github_small.png" alt="Rigid Logo" style="width:50;height:50;">
+# Rigid 
 
 Web applications like Gmail, Facebook, Soundcloud and Pandora are becoming more and more like desktop applications every day. Running each of these web apps in a separate tab in your browser can be a real pain.
 
@@ -7,7 +7,8 @@ This is where Rigid comes in, it creates an application on your computer that po
 ## Install/Run
 **First:** Install the dependencies!
 
-**Second:** Download the latest zip of this folder here: http://www.mediafire.com/file/mqhys6bzcxjzbl8/Rigid.zip or if you have git run 
+**Second:** Download the latest zip of this folder here: <button onclick="location.href='http://www.mediafire.com/file/mqhys6bzcxjzbl8/Rigid.zip'" type="button">
+     http://www.mediafire.com/file/mqhys6bzcxjzbl8/Rigid.zip</button>  or if you have git run 
     
     git clone https://github.com/alexanderepstein/Rigid
   
