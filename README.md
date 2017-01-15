@@ -14,9 +14,8 @@ This is where Rigid comes in, it creates an application on your computer that po
   
   **Last:** Run the Rigid.exe or Rigid.jar either will work
   
-  **Actually Last:** Now in the specified directory there should be a file with the name you specified with the python file extension with a double click it will run the web app if step one has been done correctly. 
+  **Actually Last:** After creating a Rigid app go to the specified directory  and there should be a file with the name you specified with a .bat file extension with a double click it will run the web app if step one has been done correctly. 
   
-  **Note** The first time you double click a .py file it might ask you to associate this with a program after choosing the python interpreter once this should not occur again 
 
 ## Known Bugs
  * The batch file still has a batch icon and not the icon of the website.
