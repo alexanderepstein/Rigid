@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<launch4jConfig>
+  <dontWrapJar>false</dontWrapJar>
+  <headerType>gui</headerType>
+  <jar>C:\Users\epsteina\Documents\GitHub\Rigid\Rigid.jar</jar>
+  <outfile>C:\Users\epsteina\Documents\GitHub\Rigid\Rigid.exe</outfile>
+  <errTitle></errTitle>
+  <cmdLine></cmdLine>
+  <chdir>.</chdir>
+  <priority>normal</priority>
+  <downloadUrl>http://java.com/download</downloadUrl>
+  <supportUrl></supportUrl>
+  <stayAlive>false</stayAlive>
+  <restartOnCrash>false</restartOnCrash>
+  <manifest></manifest>
+  <icon>C:\Users\epsteina\Documents\GitHub\Rigid\Icons\application.ico</icon>
+  <singleInstance>
+    <mutexName>Rigid</mutexName>
+    <windowTitle>Instance Running</windowTitle>
+  </singleInstance>
+  <jre>
+    <path></path>
+    <bundledJre64Bit>false</bundledJre64Bit>
+    <bundledJreAsFallback>false</bundledJreAsFallback>
+    <minVersion>1.1.0</minVersion>
+    <maxVersion></maxVersion>
+    <jdkPreference>preferJre</jdkPreference>
+    <runtimeBits>64/32</runtimeBits>
+  </jre>
+  <versionInfo>
+    <fileVersion>1.0.0.0</fileVersion>
+    <txtFileVersion>Alpha</txtFileVersion>
+    <fileDescription>Rigid an open source windows port of Fluid for MacOS</fileDescription>
+    <copyright> </copyright>
+    <productVersion>1.0.0.0</productVersion>
+    <txtProductVersion>Alpha</txtProductVersion>
+    <productName>Rigid</productName>
+    <companyName></companyName>
+    <internalName>Rigid</internalName>
+    <originalFilename>Rigid.exe</originalFilename>
+    <trademarks></trademarks>
+    <language>ENGLISH_US</language>
+  </versionInfo>
+</launch4jConfig>
