@@ -1,5 +1,3 @@
-public class Rigid extends Application {
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -23,6 +21,10 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.DirectoryChooser;
 import javafx.stage.Stage;
+
+public class Rigid extends Application {
+
+
 int height = 260;
 int width = 515;
 static Controller creationControl;  // object that controls the create button
