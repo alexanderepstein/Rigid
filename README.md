@@ -3,7 +3,7 @@
 
 Web applications like Gmail, Facebook, Soundcloud and Pandora are becoming more and more like desktop applications every day. Running each of these web apps in a separate tab in your browser can be a real pain.
 
-This is where Rigid comes in, it creates an application on your computer that points to the web app of your choice. Each of these applications will run on their own seperate process so they will not interfere with one another. Similar to the fluid application for MacOS yet unlike its UNIX counterpart this program is entierly open sourced.
+This is where Rigid comes in, it creates an application on your computer that points to the web app of your choice. Each of these applications will run on their own seperate process so they will not interfere with one another. Similar to the fluid application for MacOS yet unlike its UNIX counterpart this program is entirely open sourced.
 
 ## Install/Run
 **First:** Install the dependencies!
