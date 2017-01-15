@@ -8,7 +8,7 @@ This is where Rigid comes in, it creates an application on your computer that po
 ## Install/Run
 **First:** Install the dependencies!
 
-**Second:** Download the latest zip of this folder or if you have git run 
+**Second:** Download the latest zip of this folder here: http://www.mediafire.com/file/mqhys6bzcxjzbl8/Rigid.zip or if you have git run 
     
     git clone https://github.com/alexanderepstein/Rigid
   
@@ -21,6 +21,8 @@ This is where Rigid comes in, it creates an application on your computer that po
 ## Known Bugs
  * The python file still has a python icon and not the icon of the website.
  * URL's must start with http://www. or https://www.
+ * If cloned the jar or exe cannot leave the folder or it won't run (this occurs because it doesnt know where the icon images are stored)
+ * If downloading the zip the exe cannot leave the Rigid folder or else the application wont run (this occurs because it doesnt know where the icon images are stored)
  
 
     
