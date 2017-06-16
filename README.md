@@ -1,5 +1,7 @@
 # Rigid <img src="https://github.com/alexanderepstein/Rigid/blob/master/Icons/rigid_github_small.png" alt="Rigid Logo" style="width:50;height:50;">
 
+##### This application was made unuseful and stopped being developed after google added a button to the chrome browser that allows you to do this. 
+
 Web applications like Gmail, Facebook, Soundcloud and Pandora are becoming more and more like desktop applications every day. Running each of these web apps in a separate tab in your browser can be a real pain.
 
 This is where Rigid comes in, it creates an application on your computer that points to the web app of your choice. Each of these applications will run on their own seperate process so they will not interfere with one another. Similar to the fluid application for MacOS yet unlike its UNIX counterpart this program is entirely open sourced.
